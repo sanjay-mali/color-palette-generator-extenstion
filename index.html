@@ -1,0 +1,86 @@
+<html>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <div class="heading">
+      <h2>Color Palatte Generator</h2>
+    </div>
+    <div class="button-bg" id="generate-color">
+      <div class="toolbar">
+        <div class="color-box" id="text" style="background-color: var(--text)">
+          Text
+          <input
+            type="color"
+            id="colorPickerText"
+            onchange="updateColor('text')"
+          />
+        </div>
+        <div
+          class="color-box"
+          id="background"
+          style="background-color: var(--background); color: black"
+        >
+          Background
+          <input
+            type="color"
+            id="colorPickerBackground"
+            onchange="updateColor('background')"
+          />
+        </div>
+        <div
+          class="color-box"
+          id="primary"
+          style="background-color: var(--primary)"
+        >
+          Primary
+          <input
+            type="color"
+            id="colorPickerPrimary"
+            onchange="updateColor('primary')"
+          />
+        </div>
+        <div
+          class="color-box"
+          id="secondary"
+          style="background-color: var(--secondary)"
+        >
+          Secondary
+          <input
+            type="color"
+            id="colorPickerSecondary"
+            onchange="updateColor('secondary')"
+          />
+        </div>
+        <div
+          class="color-box"
+          id="accent"
+          style="background-color: var(--accent)"
+        >
+          Accent
+          <input
+            type="color"
+            id="colorPickerAccent"
+            onchange="updateColor('accent')"
+          />
+        </div>
+      </div>
+      <div class="controls">
+        <select id="colorScheme" onchange="generateColors()">
+          <option value="all">All</option>
+          <option value="monochromatic">Monochromatic</option>
+          <option value="analogous">Analogous</option>
+          <option value="complementary">Complementary</option>
+          <option value="splitComplementary">Split Complementary</option>
+          <option value="triadic">Triadic</option>
+        </select>
+        <button id="generateColors">Generate Colors</button>
+        <button id="savePalette">Save Palette</button>
+        <button id="sharePalette">Share Palette</button>
+      </div>
+    </div>
+    <footer>
+      <p>Created By Sanjay Mali</p>
+      <a href="github.com/sanjay-mali">Github Code</a>
+    </footer>
+    <script src="popup.js"></script>
+  </body>
+</html>
